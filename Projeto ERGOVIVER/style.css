@@ -553,9 +553,306 @@ button:hover {
     background-color: #00705f;
 }
 
+/*============= PÁGINA CADASTRO ===========*/
+.container-cadastro {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
+.left-section-cadastro {
+    background-color: #eafaf1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
 
-/*============= PÁGINA DE PERFIL ===========*/
+.left-section-cadastro h1 {
+    color: #3B6555;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
+.left-section-cadastro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.right-section-cadastro {
+    background-color: #2a9d8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container-cadastro {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-container-cadastro img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 80px;
+}
+
+.form-container-cadastro h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #3B6555;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a9d8f;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #2a9d8f;
+    border: 2px solid #2a9d8f;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #2a9d8f;
+    color: #ffffff;
+}
+
+.form-group.terms label {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.form-group.terms a {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
+.form-group.terms a:hover {
+    text-decoration: underline;
+}
+
+.login-link {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/*============= PÁGINA LOGIN ===========*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede o aparecimento de rolagem */
+}
+
+.container-cadastro {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Preenche a altura total da tela */
+}
+
+/* Left section styling */
+.left-section {
+    flex: 1;
+    background-color: #eafaf1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+.left-section-cadastro {
+    background-color: #eafaf1;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+}
+.left-section h1 {
+    color: #00856F;
+    margin-bottom: 20px;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:36px;
+    font-family:Raleway;
+    line-height:48px;
+    border-style:hidden;
+    outline:none;
+    width:553px;
+    margin-top: 60px;
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+    width:907px;
+    border-radius:79px;
+}
+
+.left-side, .right-side {
+    flex: 1; /* As seções esquerda e direita ocupam espaço igual */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.right-section {
+    flex: 1;
+    background-image: url('assets/img/login/Background.png'); /* Add background image */
+    background-size: cover; /* Make the image cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to show background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.login-form label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3e9663;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-form button:hover {
+    background-color: #21867a;
+}
+
+.login-form a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #2a9d8f;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-side, .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .left-side h1 {
+        font-size: 28px;
+        line-height: 36px;
+        width: 100%;
+    }
+}
 
 
 
@@ -563,8 +860,7 @@ button:hover {
 
 /*============= PÁGINA PALESTRA E WORKSHOPS ===========*/
 
-
-
+/*============= PÁGINA DE PERFIL ===========*/
 
 /*============= PÁGINA BLOG E NOTÍCIAS ===========*/
 
@@ -572,9 +868,10 @@ button:hover {
 
 
 
-/*============= PÁGINA LOGIN ===========*/
 
 
 
 
-/*============= PÁGINA CADASTRO ===========*/
+
+
+
