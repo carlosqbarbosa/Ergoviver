@@ -1,11 +1,4 @@
 ERGOVIVER
-
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
-
 <img src="Projeto ERGOVIVER/assets/img/logo/LOGO.png" alt="Logo do projeto">
 
 > O Ergoviver é uma plataforma focada na promoção da saúde e do bem-estar de adultos que buscam melhorar a qualidade de vida, desenvolvida por estudantes da UNIT-PE para a disciplina de UI/UX no segundo semestre de 2024. O projeto visa oferecer informações e apoio relacionados à prevenção da Síndrome de Burnout e saúde ocupacional.
