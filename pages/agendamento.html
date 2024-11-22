@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergoviver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Estilo da sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilo dos links */
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #00856F;
+            color: #fff;
+        }
+
+        .sidebar a.active {
+            background-color: #00856F;
+            color: #fff;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+            font-size: 18px;
+            color: #00856F;
+        }
+
+        /* Estilo do conteúdo principal */
+        .main-content {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Estilo das seções */
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Estilo das divisões de tempo */
+        .time-division {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .time-division h4 {
+            margin-bottom: 10px;
+            color: #00856F;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .horarios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .time-slot {
+            padding: 10px 20px;
+            background-color: #00856F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .time-slot.disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        /* Estilo da seção "Sua agenda" */
+        .appointment {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .appointment p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .appointment p strong {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="#"><i class="fas fa-credit-card"></i> Pagamentos</a>
+            <a href="#"><i class="fas fa-cog"></i> Configuração</a>
+            <a href="#"><i class="fas fa-bell"></i> Notificação</a>
+            <a href="#"><i class="fas fa-user"></i> Conta</a>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <!-- Seção "Agende um atendimento" -->
+            <div class="section">
+                <h2>Agende um atendimento</h2>
+                <div class="time-division">
+                    <h4>Manhã</h4>
+                    <div class="horarios" id="horarios-morning">
+                        <button class="time-slot">09:00</button>
+                        <button class="time-slot">10:00</button>
+                        <button class="time-slot">11:00</button>
+                        <button class="time-slot">12:00</button>
+                    </div>
+                </div>
+                <div class="time-division">
+                    <h4>Tarde</h4>
+                    <div class="horarios" id="horarios-afternoon">
+                        <button class="time-slot disabled">13:00</button>
+                        <button class="time-slot disabled">14:00</button>
+                        <button class="time-slot">15:00</button>
+                        <button class="time-slot disabled">16:00</button>
+                        <button class="time-slot disabled">17:00</button>
+                    </div>
+                </div>
+                <div class="time-division">
+                    <h4>Noite</h4>
+                    <div class="horarios" id="horarios-evening">
+                        <button class="time-slot">19:00</button>
+                        <button class="time-slot">20:00</button>
+                        <button class="time-slot">21:00</button>
+                    </div>
+                </div>
+                <div class="form-group especialidade">
+                    <label for="specialty">Especialidade da área da saúde</label>
+                    <select id="specialty">
+                        <option value="psicologia">Psicologia</option>
+                    </select>
+                </div>
+                <div class="form-group profissional">
+                    <label for="professional">Profissional da área da saúde</label>
+                    <select id="professional">
+                        <option value="nayara">Nayara</option>
+                    </select>
+                </div>
+                <div class="form-group modalidade">
+                    <label for="mode">Modalidade</label>
+                    <select id="mode">
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+                <button>Agendar</button>
+            </div>
+            
+            <!-- Seção "Sua agenda" -->
+            <div class="section">
+                <h3>Sua agenda</h3>
+                <div class="appointment">
+                    <p><strong>Data:</strong> 2024-10-10</p>
+                    <p><strong>Horário:</strong> 09:00</p>
+                    <p><strong>Especialidade:</strong> Psicologia</p>
+                    <p><strong>Profissional:</strong> Nayara</p>
+                </div>
+                <div class="appointment">
+                    <h3>10/01/2024</h3>
+                    <div class="time-division">
+                        <h4>Manhã - 09h-12h</h4>
+                        <p>11:00 - Psicóloga - Nayara</p>
+                    </div>
+                    <div class="time-division">
+                        <h4>Tarde - 13h-18h</h4>
+                        <p>13:00 - Não possui agendamento</p>
+                        <p>14:00 - Não possui agendamento</p>
+                        <p>16:00 - Não possui agendamento</p>
+                        <p>17:00 - Não possui agendamento</p>
+                    </div>
+                    <div class="time-division">
+                        <h4>Noite - 19h-21h</h4>
+                        <p>21:00 - Frederico Queiroz - Educador físico (exercícios para LER/DORT)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
