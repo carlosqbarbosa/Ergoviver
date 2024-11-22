@@ -1,12 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palestras e workshops Ergoviver</title>
-    <link rel="icon" type="image/x-icon" href="assets\img\logo\LOGO.png">
+    <title>Palestras e Workshops</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header h1 {
+    color: #00695c;
+}
+.hero-image {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.hero-image .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+.card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.card p {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.card .rating span {
+    margin-left: 5px;
+    color: #ff9800;
+}
+.card .speaker {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.card .speaker img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.card .speaker p {
+    margin: 0;
+    color: #333;
+}
+.button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+.button-container .cta-button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.button-container .cta-button:hover {
+    background-color: #399b8f8c;
+}
+.button-container .cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h1>Palestras e Workshops</h1>
+            <h2>Nossas palestras mais populares essa semana</h2>
+        </div>
+        <div class="hero-image">
+            <div class="card">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Stress-bro.png?raw=true" alt="Definição e Causas do Burnout">
+                <h2>Definição e Causas do Burnout</h2>
+                <p>Categoria: Psicologia</p>
+                <p>Principais fatores que levam ao esgotamento. Diferença entre estresse e burnout.</p>
+                <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    <span>(16,325 avaliações)</span>
+                </div>
+                <div class="speaker">
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/foto%20paciente.png?raw=true" alt="Jane Queiroz">
+                    <p>Jane Queiroz, Psicóloga</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Online%20consulting-pana%20(1).png?raw=true" alt="Legislação e Direitos Trabalhistas">
+                <h2>Legislação e Direitos Trabalhistas</h2>
+                <p>Categoria: Dúvidas</p>
+                <p>Direitos dos trabalhadores afetados por doenças físicas relacionadas ao trabalho.</p>
+                <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    <span>(832 avaliações)</span>
+                </div>
+                <div class="speaker">
+                    <img src="https://www.figma.com/file/2rkqpEVCpb4EyHP2JY9bSg/image/aac6b1b18acee54880feb3c84cfacdb2ff89076d" alt="Arthur Gomez">
+                    <p>Arthur Gomez, Advogado</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Doctor-bro.png?raw=true" alt="Tipos Comuns de Doenças Ocupacionais">
+                <h2>Tipos Comuns de Doenças Ocupacionais</h2>
+                <p>Categoria: Fisioterapia</p>
+                <p>Lesões por esforço repetitivo (LER) e distúrbios osteomusculares.</p>
+                <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    <span>(125 avaliações)</span>
+                </div>
+                <div class="speaker">
+                    <img src="https://www.figma.com/file/2rkqpEVCpb4EyHP2JY9bSg/image/1994067c3ac3d40d2341bd81bd13e2e7f755bf0d" alt="Caio Pimenta">
+                    <p>Caio Pimenta, Fisioterapeuta</p>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cta-button">VEJA TODOS OS NOSSOS PROGRAMAS</button>
+        </div>
+    </div>
 </body>
 </html>
