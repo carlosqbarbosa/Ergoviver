@@ -24,5 +24,5 @@ ERGOVIVER
 ## Objetivo Acadêmico:
 - Integrar os conceitos de UX/UI para desenvolver uma interface intuitiva e acessível, que auxilia na prevenção de - Burnout e na promoção de um ambiente de trabalho saudável e equilibrado.
 
-##FIGMA do projeto:
+## FIGMA do projeto:
 - https://www.figma.com/design/2rkqpEVCpb4EyHP2JY9bSg/WebSite-ErgoViver-(ui%2Fux)?node-id=141-960&t=Holt8EofgmGig9WW-1
