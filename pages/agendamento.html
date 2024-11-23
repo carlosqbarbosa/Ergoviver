@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergoviver</title>
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .container {
@@ -68,6 +70,8 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            height: 800px;
+            margin-top: -65px;
         }
 
         /* Estilo das divisões de tempo */
@@ -142,18 +146,53 @@
         .appointment p strong {
             color: #2c3e50;
         }
+        
+        #agendar {
+            padding: 12px 24px;
+            background-color: #00856F;
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 200px;
+            align-self: center;
+        }
+        
+        #agendar:hover {
+            background-color: #52bda9;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .main-content {
+                padding: 10px;
+                flex-direction: column;
+            }
+            .section {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <a href="#"><i class="fas fa-home"></i> Home</a>
-            <a href="#"><i class="fas fa-calendar-alt"></i> Agendamento</a>
-            <a href="#"><i class="fas fa-credit-card"></i> Pagamentos</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="pages\agendamento.html"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="pages\pagamentos.html"><i class="fas fa-credit-card"></i> Pagamentos</a>
             <a href="#"><i class="fas fa-cog"></i> Configuração</a>
             <a href="#"><i class="fas fa-bell"></i> Notificação</a>
-            <a href="#"><i class="fas fa-user"></i> Conta</a>
+            <a href="pages\perfil.html"><i class="fas fa-user"></i> Conta</a>
         </div>
 
         <!-- Conteúdo principal -->
@@ -206,7 +245,7 @@
                         <option value="online">Online</option>
                     </select>
                 </div>
-                <button>Agendar</button>
+                <button id="agendar">Agendar</button>
             </div>
             
             <!-- Seção "Sua agenda" -->
@@ -241,3 +280,4 @@
     </div>
 </body>
 </html>
+
