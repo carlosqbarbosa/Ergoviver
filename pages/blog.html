@@ -4,8 +4,284 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergoviver</title>
-    <link rel="icon" type="image/x-icon" href="imagens/LOGO.png">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
+    <style>
+        html.blog-page, body.blog-page {
+            overflow-y: auto; /* Permite a rolagem vertical */
+            height: auto; /* Altura se ajusta ao conteúdo */
+            min-height: 100%; /* Garante que sempre ocupe a altura total */
+        }
+        /* Header */
+        .header-blog {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #FFFFFF;
+            position: relative;
+        }
+        
+        .ladoEsquerdoHeader-blog {
+            margin-right: 90px;
+        }
+        
+        /* Decoração de fundo da logo */
+        .decoracaoLogo-blog {
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            width: 250px;
+            height: auto;
+            z-index: 0;
+        }
+        
+        .decoracaoLogo-blog img {
+            width: 300%;
+            height: auto;
+        }
+        
+        .logo-container-blog {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 3; 
+        }
+        
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            left: -155px;
+            top: -45px;
+        }
+        
+        .logo-text-blog {
+            color: #ffffff; 
+            font-weight: bold; 
+            text-align: right;
+            margin-left: -139px;
+            margin-top: -30px; /* Ajuste para cima */
+            vertical-align: middle;
+            font-size: 36px;
+            font-family: Raleway;
+            line-height: 48px;
+            border-style: hidden;
+            outline: none;
+            width: 324px;
+        }
+        /* Navegação */
+        .nav-blog {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            justify-content: flex-start;
+            margin-left: 150px;
+        }
+        
+        .nav-blog a {
+            color: #00856F;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .nav-blog a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-blog .signup {
+            border: 1px solid #00856F;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 15px;
+            color: #00856F;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+        }
+        
+        .nav-blog .signup:hover {
+            background-color: #00856F;
+            color: #FFFFFF;
+        }
+        
+        /* Container geral da seção */
+        .container-blog {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+            gap: 20px;
+            top: 20px;
+        }
+        /* Botão "Mais Notícias" */
+        #botao-mais-noticias {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00856F; /* Cor principal do tema */
+            color: #FFFFFF; /* Texto branco para contraste */
+            border: none;
+            border-radius: 20px; /* Bordas arredondadas */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none; /* Remove o sublinhado do link */
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.3s;
+            margin-top: -20px; /* Subirá o botão em 20px */
+        }
+        
+        #botao-mais-noticias:hover {
+            background-color: #00796B; /* Tom mais escuro no hover */
+        }
+        
+        #botao-mais-noticias:active {
+            transform: translateY(2px); /* Leve efeito de "pressionado" */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduz a sombra no clique */
+        }
+        
+        .botao-blog{
+            bottom: 100px;
+        }
+        
+        /* Conteúdo principal (lado esquerdo) */
+        .main-content {
+            flex: 6;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: -110px;
+        }
+        
+        .main-content {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: -30px;
+        }
+        .imagem-noticia{
+            height: 500px;
+            width: 500px;
+        }
+        .main-content h2 {
+            font-size: 1.8rem;
+            color: #00856F;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .main-content p {
+            font-size: 1rem;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        
+        .main-content .more-news {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #00856F;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .main-content .more-news:hover {
+            background-color: #00664C;
+        }
+        
+        .container-blog {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 10px;
+        }
+        
+        .main-content {
+            flex: 3; /* Parte principal maior */
+        }
+        
+        .sidebar-blog {
+        
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Define duas colunas com tamanhos iguais */
+            gap: 30px; /* Espaço entre os itens */
+            width: 600px;
+            height: 600px;
+        
+            
+        }
+        
+        .sidebar-blog .article {
+            display: flex;
+            align-items: flex-start;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .sidebar-blog .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sidebar-blog .article img {
+            margin: 0;
+            width: 80px;
+            height: 80px;
+            object-fit: cover; 
+            flex-shrink: 0; 
+        }
+        
+        .sidebar-blog .article h3 {
+            font-size: 1.1rem;
+            color: #00856F;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .sidebar-blog .article p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        #botao-ler:hover {
+            background-color: #4aa89d; 
+        }
+        
+        #botao-ler:active {
+            transform: translateY(2px); 
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+        
+        #botao-ler {
+            display: inline-block;
+            padding: 6px 12px; /* Reduzido para tornar o botão menor */
+            background-color: #00856F; 
+            color: #FFFFFF; 
+            border: none;
+            border-radius: 15px; /* Bordas mais arredondadas, opcional */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            cursor: pointer;
+            font-size: 0.875rem; /* Tamanho do texto reduzido */
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none; 
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.3s;
+        }
+    </style>
 </head>
 <body class="blog-page">
     <!--==================== PARTE DE CIMA DA PÁGINA HOME ====================-->
@@ -13,10 +289,10 @@
         <nav class="nav container-blog">
             <div class="ladoEsquerdoHeader-blog" id="ladoEsquerdoHeader-blog">
                 <div class="decoracaoLogo-blog" id="decoracaoLogo-blog">
-                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Vector%201.png?raw=true" alt="Decoração para a logo verde e branca">  
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Vector%201.png?raw=true">   
                 </div>
                 <div class="logo-container-blog">
-                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/logo/logoBranca.png?raw=true" alt="Logo verde e branca do Ergoviver" class="logo-image">   
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/logoBranca.png?raw=true" alt="Logo verde e branca do Ergoviver" class="logo-image">   
                     <span id="logo-text-blog" class="logo-text-blog">ERGOVIVER</span>
                 </div> 
             </div>
@@ -34,9 +310,8 @@
     <div class="container-blog">
         <div class="main-content">
             <div class="article">
-                <img id="imagem-noticia" class="imagem-noticia" src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Phisiotherapy-amico.png?raw=true"  alt="Sessão de Fisioterapia">
+                <img id="imagem-noticia" class="imagem-noticia" src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Phisiotherapy-amico.png?raw=true"  alt="Sessão de Fisioterapia">
                 <h2>28 de fevereiro: Dia Mundial de Combate às LER/Dort</h2>
-                <br>
                 <p>Paulo Mourão, 28 Feb, 2024</p>
                 <a id="botao-mais-noticias" href="#" class="cta-botao-mais-noticia">MAIS NOTÍCIAS</a>
             </div>
@@ -44,34 +319,39 @@
         </div>
         <div class="sidebar-blog">
             <div class="article">
-                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Medical%20prescription-bro.png?raw=true" alt="Efeitos do confinamento">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Medical%20prescription-bro.png?raw=true" alt="Efeitos do confinamento">
                 <div>
                     <h3>Efeitos do confinamento: como superar as consequências do Coronavirus?</h3>
                     <p>Roberto Silva, Agosto 2024</p>
+                    <a id="botao-ler" href="#" class="cta-botao-ler">clique aqui para ler</a>
                 </div>
             </div>
             <div class="article">
-                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Business%20crisis-pana.png?raw=true" alt="Nova lista de doenças relacionadas ao trabalho">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Business%20crisis-pana.png?raw=true" alt="Nova lista de doenças relacionadas ao trabalho">
                 <div>
                     <h3>Nova lista de doenças relacionadas ao trabalho</h3>
                     <p>Natália Souza, 14 Março 2024</p>
+                    <a id="botao-ler" href="#" class="cta-botao-ler">clique aqui para ler</a>
                 </div>
             </div>
             <div class="article">
-                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/imagemSobre.png?raw=true" alt="Burnout: quando devemos procurar ajuda?">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Online%20Doctor-bro%201.png?raw=true" alt="Burnout: quando devemos procurar ajuda?">
                 <div>
                     <h3>Burnout: quando devemos procurar ajuda?</h3>
                     <p>Manuela Oliveira, Setembro 2024</p>
+                    <a id="botao-ler" href="#" class="cta-botao-ler">clique aqui para ler</a>
                 </div>
             </div>
             <div class="article">
-                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/Training%20at%20home-rafiki.png?raw=true" alt="Atividade física que pode aliviar LER/DORT">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Training%20at%20home-rafiki.png?raw=true" alt="Atividade física que pode aliviar LER/DORT">
                 <div>
                     <h3>Atividade física que pode aliviar LER/DORT</h3>
                     <p>Manuela Oliveira, Setembro 2024</p>
+                    <a id="botao-ler" href="#" class="cta-botao-ler">clique aqui para ler</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
