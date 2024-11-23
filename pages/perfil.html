@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Meu perfil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,28 +13,33 @@
             margin: 0;
             padding: 0;
         }
+        
         .container {
             display: flex;
+            height: 100vh;
         }
+        
         .sidebar {
             width: 220px;
-            background-color: #2c3e50;
+            background-color: #fdfdfd;
             padding: 20px;
-            height: 100vh;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
+        
         .sidebar a {
             display: block;
-            color: #ecf0f1;
+            color: #005f4f;
             text-decoration: none;
             margin-bottom: 15px;
             padding: 10px;
             border-radius: 4px;
             transition: background-color 0.3s ease;
         }
+        
         .sidebar a:hover {
             background-color: #34495e;
         }
+        
         .content {
             flex-grow: 1;
             padding: 20px;
@@ -41,12 +48,14 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        
         .profile-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
         }
+        
         .profile-header img {
             border-radius: 50%;
             width: 100px;
@@ -54,118 +63,139 @@
             margin-right: 20px;
             border: 2px solid #2c3e50;
         }
+        
         .profile-header h1 {
             margin: 0;
-            flex-grow: 1;
             font-size: 24px;
             color: #2c3e50;
         }
+        
         .profile-header .last-update {
             color: #7f8c8d;
             font-size: 14px;
         }
+        
+        .profile-form .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
         .form-group {
             display: flex;
-            margin-bottom: 15px;
+            flex-direction: column;
+            width: 48%;
         }
+        
         .form-group label {
-            width: 30%;
-            margin-right: 10px;
-            text-align: right;
-            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #4b7aa8;
         }
+        
         .form-group .info {
-            width: 65%;
-            background-color: #ecf0f1;
-            padding: 8px;
-            border-radius: 4px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
             border: 1px solid #bdc3c7;
-            color: #2c3e50;
+            color: #495057;
+            text-align: left;
         }
+        
         .save-button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
             display: block;
-            margin-top: 20px;
-            width: 100%;
-            box-sizing: border-box;
-            border-radius: 4px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #00856F;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            cursor: pointer;
         }
+        
         .save-button:hover {
-            background-color: #2980b9;
+            background-color: #005f4f;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <a href="#">Home</a>
-            <a href="#">Agendamento</a>
-            <a href="#">Pagamentos</a>
-            <a href="#">Configuração</a>
-            <a href="#">Notificação</a>
-            <a href="#">Conta</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="pages/agendamento.html"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="pages/pagamentos.html"><i class="fas fa-credit-card"></i> Pagamentos</a>
+            <a href="#"><i class="fas fa-cog"></i> Configuração</a>
+            <a href="#"><i class="fas fa-bell"></i> Notificação</a>
+            <a href="pages/perfil.html"><i class="fas fa-user"></i> Conta</a>
         </div>
         <div class="content">
             <div class="profile-header">
                 <div style="display: flex; align-items: center;">
-                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/Projeto%20ERGOVIVER/assets/img/foto%20paciente.png?raw=true" alt="Foto de Perfil">
-                    <h1>Editar perfil</h1>
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/foto%20paciente.png?raw=true" alt="Foto de Perfil">
+                    <h1>Meu perfil</h1>
                 </div>
                 <div class="last-update">Última atualização: 1 de agosto de 2024</div>
             </div>
-            <form>
-                <div class="form-group">
-                    <label for="nome-completo">Nome Completo</label>
-                    <div class="info">Mariana Costa Fernandez</div>
+            <div class="profile-form">
+                <div class="row">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <div class="info">Mariana Costa Fernandez</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Data de nascimento</label>
+                        <div class="info">13/11/1995</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="data-nascimento">Data de nascimento</label>
-                    <div class="info">13/11/1995</div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <div class="info">120.365.458-66</div>
+                    </div>
+                    <div class="form-group">
+                        <label>CEP</label>
+                        <div class="info">51456987</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="cpf">CPF</label>
-                    <div class="info">120.365.458-66</div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="info">marianacosta95@gmail.com</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Gênero</label>
+                        <div class="info">Mulher</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="cep">CEP</label>
-                    <div class="info">51456987</div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Número de telefone</label>
+                        <div class="info">(81) 9999-9999</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <div class="info">São Paulo</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="info">marianacosta95@gmail.com</div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <div class="info">São Paulo</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Rua</label>
+                        <div class="info">Rua Jardim, 305</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="genero">Gênero</label>
-                    <div class="info">Mulher</div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Complemento</label>
+                        <div class="info">-</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="telefone">Número de telefone</label>
-                    <div class="info">(81) 9999-9999</div>
-                </div>
-                <div class="form-group">
-                    <label for="estado">Estado</label>
-                    <div class="info">São Paulo</div>
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <div class="info">Recife</div>
-                </div>
-                <div class="form-group">
-                    <label for="rua">Rua</label>
-                    <div class="info">Avenida Boa Viagem</div>
-                </div>
-                <div class="form-group">
-                    <label for="complemento">Complemento</label>
-                    <div class="info">Apartamento 301</div>
-                </div>
-                <button type="submit" class="save-button">Salvar</button>
-            </form>
+            </div>
+            <button type="submit" class="save-button">Salvar</button>
         </div>
     </div>
 </body>
