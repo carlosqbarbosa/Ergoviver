@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos do Confinamento</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.ladoEsquerdoHeader{
+    margin-right: 90px;
+}
+
+/* Decoração de fundo da logo */
+.decoracaoLogo {
+    position: absolute;
+    top: 5px; /* Ajuste para posicionar a decoração */
+    left: -10px;
+    width: 250px;
+    height: auto;
+    z-index: 0;
+    
+}
+
+.decoracaoLogo img {
+    width: 300%;
+    height: auto;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 25px;;
+    z-index: 3;
+    margin-left: 36px; 
+}
+
+.logo-image { 
+    margin-left: -140px;
+    height:100px;
+    width:100px;
+    border-radius:500px;
+    top:-20px;
+    position:absolute;
+}
+
+.logo-text {
+    color: #ffffff; 
+    font-weight: bold; 
+    text-align:right;
+    margin-left: -120px;
+    vertical-align:text-middle;
+    font-size:36px;
+    font-family:Raleway;
+    line-height:48px;
+    border-style:hidden;
+    outline:none;
+    width:324px;
+}
+
+/*NAV DA HOME */
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    margin-left: 150px;
+}
+.nav a {
+    color: #00856F;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .signup {
+    border: 1px solid #00856F;
+    padding: 5px 10 px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px; /* Adicione "px" para definir a unidade do tamanho da fonte */
+    color: #00856F;
+    transition: background-color 0.3s, color 0.3s;
+    width: 125px; /* Define uma largura específica */
+    height: 35px; /* Define uma altura específica */
+    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
+    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
+    text-align: center; /* Centraliza o texto */
+}
+
+.nav .signup:hover {
+    background-color: #00856F;
+    color: #ffffff;
+}
+
+/* Artigo */
+.article-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.article-header h1 {
+    font-size: 32px;
+    color: #00856F;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+.article-content{
+    width: 100%; /* Faz com que a largura ocupe 100% da tela */
+    max-width: 12000px; /* Define um limite máximo para telas grandes */
+    margin: 0 auto; /* Centraliza o conteúdo em telas maiores */
+    margin-top: -70px;
+    padding: 20px; /* Adiciona espaçamento interno */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Um leve sombreamento para destacar */
+}
+
+.article-content h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.article-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.article-content ul li a {
+    color: #00856F;
+    text-decoration: none;
+}
+
+.article-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.article-image {
+    width: 500px;
+    height: 500px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.article-image-small {
+    width: 500px;
+    height: 500px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00856F;
+    color: #fff;
+    font-size: 14px;
+    margin-top: -20px;
+}
+ol {
+    padding-left: 20px; /* Adiciona um espaço antes dos números */
+    margin-bottom: 20px; /* Espaço após a lista */
+}
+
+ol li {
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+    font-size: 16px;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+   <!--==================== PARTE DE CIMA DA PÁGINA HOME ====================-->
+   <header class="header" id="header">
+    <nav class="nav container">
+        <div class="ladoEsquerdoHeader" id="ladoEsquerdoHeader">
+            <div class="decoracaoLogo" id="decoracaoLogo">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Vector%201.png?raw=true">  
+            </div>
+
+            <div class="logo-container">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/logoBranca.png?raw=true" alt="Logo verde e branca do Ergoviver" class="logo-image">   
+                <span class="logo-text">ERGOVIVER</span>
+            </div> 
+
+        </div>
+        
+        <!--==================== PARTE DA HOME PARA NAVEGAÇÃO ====================-->
+        <nav class="nav">
+            <a href="index.html">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#depoimentos">Blog e notícias</a>
+            <a href="#login">Login</a>
+            <a href="/pages/cadastro.html" class="signup">CADASTRE-SE</a>
+        </nav>
+    </nav>
+</header>
+
+    <!-- Conteúdo principal -->
+    <main class="article">
+        <header class="article-header">
+            <h1>Efeitos do Confinamento: Como Superar as Consequências do Coronavírus?</h1>
+            <p class="article-meta">Por Renata Silva | Agosto de 2024</p>
+            <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Medical%20prescription-bro.png?raw=true" alt="Imagem representativa" class="article-image">
+        </header>
+
+        <section class="article-content">
+            <p>
+                O período de confinamento provocado pela pandemia de COVID-19 trouxe mudanças profundas na forma como vivemos e trabalhamos.
+                Muitas pessoas experimentaram um impacto significativo em sua saúde mental, desde a solidão do isolamento até os limites que muitos enfrentaram ao conciliar vida pessoal e profissional.
+            </p>
+            <p>
+                Neste artigo, vamos explorar os principais desafios que os trabalhadores enfrentaram e apresentar estratégias para promover a saúde mental e o bem-estar no ambiente de trabalho.
+            </p>
+
+            <h2>Os Impactos do Confinamento na Saúde Mental</h2>
+            <ul>
+                <li><a href="#">Aumento de sintomas de ansiedade e depressão</a></li>
+                <li><a href="#">Efeitos do isolamento social no bem-estar emocional</a></li>
+                <li><a href="#">Dificuldades em conciliar trabalho remoto e vida pessoal</a></li>
+            </ul>
+
+            <h2>Estratégias para Superar os Efeitos do Confinamento</h2>
+            
+                <h3>1.Promova a saúde mental no ambiente de trabalho:</h3>
+            
+            <p>
+                As empresas desempenham um papel crucial na recuperação da saúde mental dos trabalhadores. Algumas iniciativas incluem:
+            </p>
+            <ol>
+                <li>Programas de bem-estar que ofereçam suporte psicológico.</li>
+                <li>Treinamentos sobre resiliência emocional.</li>
+                <li>Incentivo ao equilíbrio entre vida pessoal e profissional.</li>
+            </ol>
+
+            <h3>2. Crie uma rotina saudável</h2>
+                <p>
+                    A organização do tempo é essencial para o bem-estar:
+                </p>
+                <ol>
+                    <li>Estabeleça horários fixos para trabalhar, descansar e socializar.</li>
+                    <li>Pratique atividades físicas regularmente, como caminhada ou yoga, que ajudam a reduzir o estresse.</li>
+                    <li>Inclua pausas durante o expediente para relaxar e recarregar as energias.</li>
+                </ol>
+
+                <h3>3. Fortaleça os laços sociais</h3>
+                    <p>
+                        O apoio de colegas, amigos e familiares é fundamental:
+                    </p>
+                    <ol>
+                        <li>Participe de encontros presenciais ou virtuais para compartilhar experiências e trocar ideias.</li>
+                        <li>Reforce os canais de comunicação no ambiente de trabalho, promovendo empatia e cooperação.</li>
+                    </ol>
+
+                   <h3>4. Invista em autoconhecimento</h3> 
+                   <p>
+                     Entender suas emoções pode ajudar a lidar melhor com elas:
+                   </p>
+                   <ol>
+                    <li>Pratique meditação ou mindfulness para desenvolver atenção plena.</li>
+                    <li>Considere a ajuda de um terapeuta para trabalhar questões mais profundas.</li>
+                   </ol>
+                       
+                        
+                        
+            
+            <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Elbow%20bump-bro%201.png?raw=true" alt="Imagem ilustrativa" class="article-image-small">
+
+            <h2>O Papel da Sociedade na Recuperação</h2>
+            <p>
+                A saúde mental dos trabalhadores não é apenas uma responsabilidade individual ou corporativa, mas também uma questão social. Políticas públicas voltadas para a saúde emocional, como campanhas de conscientização e maior acesso a serviços psicológicos, são essenciais para construir uma sociedade mais resiliente.
+            </p>
+
+            <h2>Conclusão</h2>
+            <p>
+                Embora o confinamento tenha deixado marcas profundas, também trouxe oportunidades para repensarmos a relação entre trabalho, saúde e bem-estar. Priorizar a saúde mental é uma jornada coletiva que começa com ações simples e consistentes. Ao adotar estratégias de autocuidado e fomentar ambientes de trabalho mais saudáveis, podemos superar os desafios do passado e construir um futuro mais equilibrado e feliz.
+Se você enfrenta dificuldades emocionais ou conhece alguém que precise de ajuda, não hesite em buscar apoio. O primeiro passo para superar qualquer desafio é reconhecer a necessidade de cuidar de si. 🌟
+            </p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 | Ergoviver. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
