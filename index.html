@@ -3,9 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ErgoViver - Promovendo saúde e bem-estar no ambiente de trabalho com prevenção de Burnout, reabilitação e educação.">
+    <meta name="keywords" content="ErgoViver, saúde, bem-estar, burnout, ergonomia, qualidade de vida">
     <title>Ergoviver</title>
-    <link rel="icon" type="image/x-icon" href="assets\img\logo\LOGO.png">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
+    <style>
+    /* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+/* ============= HOME =============*/
+/* HOME PARTE 1:  Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.ladoEsquerdoHeader{
+    margin-right: 90px;
+}
+
+/* Decoração de fundo da logo */
+.decoracaoLogo {
+    position: absolute;
+    top: 5px; /* Ajuste para posicionar a decoração */
+    left: -10px;
+    width: 250px;
+    height: auto;
+    z-index: 0;
+    
+}
+
+.decoracaoLogo img {
+    width: 300%;
+    height: auto;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 25px;;
+    z-index: 3;
+    margin-left: 36px; 
+}
+
+.logo-image { 
+    margin-left: -140px;
+    height:100px;
+    width:100px;
+    border-radius:500px;
+    top:-20px;
+    position:absolute;
+}
+
+.logo-text {
+    color: #ffffff; 
+    font-weight: bold; 
+    text-align:right;
+    margin-left: -120px;
+    vertical-align:text-middle;
+    font-size:36px;
+    font-family:Raleway;
+    line-height:48px;
+    border-style:hidden;
+    outline:none;
+    width:324px;
+}
+
+/*NAV DA HOME */
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    margin-left: 150px;
+}
+.nav a {
+    color: #00856F;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .signup {
+    border: 1px solid #00856F;
+    padding: 5px 10 px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px; /* Adicione "px" para definir a unidade do tamanho da fonte */
+    color: #00856F;
+    transition: background-color 0.3s, color 0.3s;
+    width: 125px; /* Define uma largura específica */
+    height: 35px; /* Define uma altura específica */
+    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
+    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
+    text-align: center; /* Centraliza o texto */
+}
+
+.nav .signup:hover {
+    background-color: #00856F;
+    color: #ffffff;
+}
+
+/* PARTE 2 HOME: "FICA NO CENTRO DA PÁGINA" */
+.hero-image {
+    height: 650px;
+    width: 600px;
+    border-radius:378px;
+    left:350px;
+    top:30px;
+    position:absolute; 
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 70px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100vh; /* Preenche a altura da tela */
+}
+
+.hero-content h1 {
+    font-size: 2rem; /* Ajuste conforme necessário */
+    line-height: 1.5;
+    color: #00695c; /* Altere a cor conforme desejado */
+    margin-right: 600px;
+}
+
+.botao {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #00796b; /* Ajuste conforme desejado */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: #399b8f8c; 
+}
+
+.cta-button:active {
+    transform: translateY(2px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.hero-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* ============= NOSSOS SERVIÇOS =============*/
+.servicos-text {
+    text-align: center; 
+    padding: 20px 0;
+    font-family:Raleway;
+}
+
+.client-text-one {
+    color:#2bb79d;
+    text-align:center;
+    vertical-align:text-top;
+    font-size: 2.5rem;
+    font-family:Raleway;
+    margin: 0 auto;
+    line-height:auto;
+    border-style:hidden;
+    outline:none;
+    width:fit-content;
+    }
+
+.card {
+    height: 423px;
+    width: 368px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+    background-color: #00856f;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header-icon {
+    background-color: #ffffff;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.card-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.card-text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    line-height: 24px;
+}
+
+.button-primary {
+    background-color: #00856f;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    height: 47px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+    background-color: #016a62;
+}
+
+.servicos-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /* Centraliza a largura total */
+    background-color: #e9ecef; /* cor para diferenciar a seção */
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9ecef; /* cor para diferenciar a seção */
+    padding: 50px 0;
+}
+
+.servicos-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* para que os cards fiquem em linha em telas grandes e se ajustem em telas menores */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============= SOBRE =============*/
+.sobre {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.titulo-sobre {
+    text-align: center;
+    font-size: 2.5em;
+    color: #00796b;
+    font-weight: bold;
+    font-family:Raleway;
+    margin-bottom: 30px;
+}
+
+.titulo-destaque {
+    color: #38b388;
+}
+
+.conteudo-sobre {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-sobre {
+    width: 190px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: -600px;
+    margin-top: -90px;
+}
+.imagem-ilustrativa {
+    width: 500;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: -700px;
+}
+
+.texto-e-imagem {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-sobre {
+    font-family: Montserrat;
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #000000;
+    margin-left: 500px;
+    font-size: 19px;
+    margin-top: -550px;
+    align-items: center;
+    text-align: justify; /* Justifica o texto para uma apresentação mais formal */
+}
+
+.lista-oferecemos {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.lista-oferecemos li {
+    margin-bottom: 10px;
+}
+
+
+/* RODAPÉ */
+.rodape {
+  background-color:#00856F;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#ffffff;
+}
+
+.text-footer{
+    align-items: center;
+    text-align: justify; 
+    margin-left: -90px;
+}
+.header-footer{
+    margin-left: 140px;
+}
+
+
+.copyright-text {
+  margin-left: 30px;
+}
+
+.card-content-footer{
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    </style>
 </head>
 <body>
     <!--==================== PARTE DE CIMA DA PÁGINA HOME ====================-->
@@ -13,11 +431,11 @@
         <nav class="nav container">
             <div class="ladoEsquerdoHeader" id="ladoEsquerdoHeader">
                 <div class="decoracaoLogo" id="decoracaoLogo">
-                    <img src="assets\img\Vector 1.png" alt="Decoração para a logo verde e branca">  
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Vector%201.png?raw=true">  
                 </div>
 
                 <div class="logo-container">
-                    <img src="assets\img\logo\logoBranca.png" alt="Logo verde e branca do Ergoviver" class="logo-image">   
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/logoBranca.png?raw=true" alt="Logo verde e branca do Ergoviver" class="logo-image">   
                     <span class="logo-text">ERGOVIVER</span>
                 </div> 
 
@@ -25,13 +443,14 @@
             
             <!--==================== PARTE DA HOME PARA NAVEGAÇÃO ====================-->
             <nav class="nav">
-                <a href="#inicio">Início</a>
+                <a href="index.html">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#depoimentos">Blog e notícias</a>
                 <a href="#login">Login</a>
-                <a href="#cadastro" class="signup">CADASTRE-SE</a>
+                <a href="/pages/cadastro.html" class="signup">CADASTRE-SE</a>
             </nav>
+        </nav>
     </header>
 
     <main class="main">
@@ -39,12 +458,12 @@
          <section id="inicio" class="hero">
             <div class="hero-content">
                 <h1>ErgoViver: porque sua saúde merece o melhor cuidado e atenção</h1>
-                <div class="botao">
+                <div class="botao" id="botao">
                     <button type="submit" class="cta-button">AGENDE SUA CONSULTA</button>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets\img\PessoasDaHome.png" alt="Ilustração de consulta" class="hero-image">
+                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/PessoasDaHome.png?raw=true" alt="Ilustração de consulta" class="hero-image">
             </div>
         </section>
     
@@ -59,7 +478,7 @@
                 <div class="card tratamento">
                     <div class="card-header">
                         <div class="card-header-icon">
-                            <img src="assets\img\iconePessoa.png" alt="Ícone de usuário">
+                            <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/iconePessoa.png?raw=true" alt="Ícone de usuário">
                         </div>
                         <div class="card-header-title">Tratamento e Reabilitação</div>
                     </div>
@@ -74,7 +493,7 @@
                 <div class="card prevencao">
                     <div class="card-header">
                         <div class="card-header-icon">
-                            <img src="assets\img\iconePessoa.png" alt="Ícone de usuário">
+                            <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/iconePessoa.png?raw=true" alt="Ícone de usuário">
                         </div>
                         <div class="card-header-title">Prevenção de Doenças Ocupacionais</div>
                     </div>
@@ -88,7 +507,7 @@
                 <div class="card palestras">
                     <div class="card-header">
                         <div class="card-header-icon">
-                            <img src="assets\img\iconePessoa.png" alt="Ícone de usuário">
+                            <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/iconePessoa.png?raw=true" alt="Ícone de usuário">
                         </div>
                         <div class="card-header-title">Palestras e Workshops</div>
                     </div>
@@ -98,7 +517,6 @@
                     </div>
                 </div>
             </div>
-            
         </section>
 
          <!--==================== SOBRE====================-->
@@ -107,11 +525,11 @@
             <h2 class="titulo-sobre">Sobre Nós</h2>
             <div class="conteudo-sobre">
                 <div class="logo-container">
-                    <img src="assets\img\logo\LOGO.png" alt="Logo da Ergoviver" class="logo-sobre">
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true" alt="Logo da Ergoviver" class="logo-sobre">
                 </div>
                 <div class="texto-e-imagem">
                     <div class="imagem-sobre">
-                        <img src="assets\img\imagemSobre.png" alt="Imagem ilustrativa de pessoas" class="imagem-ilustrativa">
+                        <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/equipe%20(sobre).png?raw=true" alt="Imagem ilustrativa de pessoas" class="imagem-ilustrativa">
                     </div>
                     <div class="texto-sobre">
                         <p>
