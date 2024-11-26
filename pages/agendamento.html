@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergoviver</title>
-    <script src="script.js" defer></script>
+    <script src="../script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -181,18 +181,23 @@
                 margin-bottom: 20px;
             }
         }
+        .time-slot.selected {
+            background-color: #52bda9;
+            border: 2px solid #00856F;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="pages\agendamento.html"><i class="fas fa-calendar-alt"></i> Agendamento</a>
-            <a href="pages\pagamentos.html"><i class="fas fa-credit-card"></i> Pagamentos</a>
+            <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="/pages/agendamento.html"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="/pages/pagamentos.html"><i class="fas fa-credit-card"></i> Pagamentos</a>
             <a href="#"><i class="fas fa-cog"></i> Configuração</a>
             <a href="#"><i class="fas fa-bell"></i> Notificação</a>
-            <a href="pages\perfil.html"><i class="fas fa-user"></i> Conta</a>
+            <a href="/pages/perfil.html"><i class="fas fa-user"></i> Conta</a>
         </div>
 
         <!-- Conteúdo principal -->
@@ -231,6 +236,7 @@
                     <label for="specialty">Especialidade da área da saúde</label>
                     <select id="specialty">
                         <option value="psicologia">Psicologia</option>
+                        <option value="edFisica">Educação física</option>
                     </select>
                 </div>
                 <div class="form-group profissional">
@@ -243,6 +249,7 @@
                     <label for="mode">Modalidade</label>
                     <select id="mode">
                         <option value="online">Online</option>
+                        <option value="presencial">Presencial</option>
                     </select>
                 </div>
                 <button id="agendar">Agendar</button>
@@ -280,4 +287,5 @@
     </div>
 </body>
 </html>
+
 
