@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Reset */
 * {
     margin: 0 auto;
     padding: 0;
@@ -38,7 +39,7 @@ body {
 /* Decoração de fundo da logo */
 .decoracaoLogo {
     position: absolute;
-    top: 5px; 
+    top: 5px; /* Ajuste para posicionar a decoração */
     left: -10px;
     width: 250px;
     height: auto;
@@ -89,7 +90,7 @@ body {
     display: flex;
     list-style: none;
     gap: 30px;
-    justify-content: flex-start; 
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
     margin-left: 150px;
 }
 .nav a {
@@ -108,14 +109,14 @@ body {
     padding: 5px 10 px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 15px; 
+    font-size: 15px; /* Adicione "px" para definir a unidade do tamanho da fonte */
     color: #00856F;
     transition: background-color 0.3s, color 0.3s;
-    width: 125px; 
-    height: 35px; 
-    display: inline-block; 
-    white-space: nowrap; 
-    text-align: center; 
+    width: 125px; /* Define uma largura específica */
+    height: 35px; /* Define uma altura específica */
+    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
+    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
+    text-align: center; /* Centraliza o texto */
 }
 
 .nav .signup:hover {
@@ -144,8 +145,8 @@ body {
     ;
 }
 .article-content{
-    width: 100%; 
-    max-width: 1500px; 
+    width: 100%; /* Faz com que a largura ocupe 100% da tela */
+    max-width: 1500px; /* Define um limite máximo para telas grandes */
     margin: 0 auto; 
     margin-top: -70px;
     padding: 20px; 
@@ -154,7 +155,7 @@ body {
 }
 .article-content p {
     text-align: justify;
-    line-height: 1.6; 
+    line-height: 1.6; /* Para melhorar a legibilidade */
 }
 
 .article-content h2 {
@@ -199,12 +200,12 @@ body {
     margin-top: -20px;
 }
 ol {
-    padding-left: 20px; 
-    margin-bottom: 20px; 
+    padding-left: 20px; /* Adiciona um espaço antes dos números */
+    margin-bottom: 20px; /* Espaço após a lista */
 }
 
 ol li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
     font-size: 16px;
     color: #000000;
 }
@@ -326,5 +327,6 @@ Se você enfrenta dificuldades emocionais ou conhece alguém que precise de ajud
     <footer class="footer">
         <p>&copy; 2024 | Ergoviver. Todos os direitos reservados.</p>
     </footer>
+    <script src="../script.js" defer></script>
 </body>
 </html>
