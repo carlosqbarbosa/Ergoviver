@@ -6,9 +6,11 @@
     <meta name="description" content="ErgoViver - Promovendo saúde e bem-estar no ambiente de trabalho com prevenção de Burnout, reabilitação e educação.">
     <meta name="keywords" content="ErgoViver, saúde, bem-estar, burnout, ergonomia, qualidade de vida">
     <title>Ergoviver</title>
-    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
+    <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <style>
-    /* Estilos gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +35,7 @@
 /* Decoração de fundo da logo */
 .decoracaoLogo {
     position: absolute;
-    top: 5px; /* Ajuste para posicionar a decoração */
+    top: 5px; 
     left: -10px;
     width: 250px;
     height: auto;
@@ -84,7 +86,7 @@
     display: flex;
     list-style: none;
     gap: 30px;
-    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    justify-content: flex-start; 
     margin-left: 150px;
 }
 .nav a {
@@ -103,14 +105,14 @@
     padding: 5px 10 px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 15px; /* Adicione "px" para definir a unidade do tamanho da fonte */
+    font-size: 15px; 
     color: #00856F;
     transition: background-color 0.3s, color 0.3s;
-    width: 125px; /* Define uma largura específica */
-    height: 35px; /* Define uma altura específica */
-    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
-    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
-    text-align: center; /* Centraliza o texto */
+    width: 125px; 
+    height: 35px; 
+    display: inline-block; 
+    white-space: nowrap; 
+    text-align: center; 
 }
 
 .nav .signup:hover {
@@ -140,13 +142,13 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    min-height: 100vh; /* Preenche a altura da tela */
+    min-height: 100vh; 
 }
 
 .hero-content h1 {
-    font-size: 2rem; /* Ajuste conforme necessário */
+    font-size: 2rem; 
     line-height: 1.5;
-    color: #00695c; /* Altere a cor conforme desejado */
+    color: #00695c; 
     margin-right: 600px;
 }
 
@@ -284,6 +286,7 @@
     cursor: pointer;
     text-transform: capitalize;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
@@ -293,20 +296,20 @@
 
 .servicos-section {
     width: 100vw;
-    margin-left: calc(50% - 50vw); /* Centraliza a largura total */
-    background-color: #e9ecef; /* cor para diferenciar a seção */
+    margin-left: calc(50% - 50vw); 
+    background-color: #e9ecef; 
     padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e9ecef; /* cor para diferenciar a seção */
+    background-color: #e9ecef; 
     padding: 50px 0;
 }
 
 .servicos-cards {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* para que os cards fiquem em linha em telas grandes e se ajustem em telas menores */
+    flex-wrap: wrap; 
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -446,9 +449,9 @@
                 <a href="index.html">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
-                <a href="#depoimentos">Blog e notícias</a>
-                <a href="#login">Login</a>
-                <a href="pages/cadastro.html" class="signup">CADASTRE-SE</a>
+                <a href="pages\blog.html">Blog e notícias</a>
+                <a href="/pages/login.html">Login</a>
+                <a href="/pages/cadastro.html" class="signup">CADASTRE-SE</a>
             </nav>
         </nav>
     </header>
@@ -457,7 +460,8 @@
          <!--==================== HOME ====================-->
          <section id="inicio" class="hero">
             <div class="hero-content">
-                <h1>ErgoViver: porque sua saúde merece o melhor cuidado e atenção</h1>
+                <h1>ErgoViver: porque sua saúde merece 
+                <br>o melhor cuidado e atenção</h1>
                 <div class="botao" id="botao">
                     <button type="submit" class="cta-button">AGENDE SUA CONSULTA</button>
                 </div>
@@ -513,7 +517,7 @@
                     </div>
                     <div class="card-content">
                         <p class="card-text">Os profissionais da área de saúde realizarão palestras e workshops sobre saúde ocupacional, abordando temas como ergonomia e gestão do estresse, para melhorar o bem-estar no ambiente de trabalho.</p>
-                        <button class="button-primary">Saiba mais</button>
+                        <a href="pages/palestra.html" class="button-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -562,7 +566,9 @@
             <p class="copyright-text">© 2024 Todos os direitos rervados.</p>
                 
       </footer>
+     
     </main>
+
     
 </body>
 </html>
