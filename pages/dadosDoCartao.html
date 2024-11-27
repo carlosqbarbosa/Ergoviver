@@ -19,7 +19,6 @@
             height: 100vh;
         }
 
-        /* Estilo da sidebar */
         .sidebar {
             width: 250px;
             background-color: #f4f4f4;
@@ -56,8 +55,6 @@
             font-size: 18px;
             color: #00856F;
         }
-
-        /* Área de conteúdo */
         .content {
             flex: 1;
             padding: 40px;
@@ -143,39 +140,6 @@
             font-weight: bold;
             color: #00856F;
         }
-
-        /* Dois quadrados para o resumo da compra */
-        .double-box {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .box {
-            padding: 20px;
-            background-color: #f4f8f8;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .box h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .box p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .box .total {
-            font-size: 16px;
-            font-weight: bold;
-            color: #00856F;
-        }
     </style>
 </head>
 <body>
@@ -217,21 +181,15 @@
                 <!-- Resumo -->
                 <div class="summary-container">
                     <h3>Resumo da compra</h3>
-                    <div class="double-box">
-                        <div class="box">
-                            <p>Código da compra: <strong>11458523</strong></p>
-                            <p>Cupons: <strong>-</strong></p>
-                            <p>Valor total: <strong>R$ 100.00</strong></p>
-                        </div>
-                        <div class="box">
-                            <p class="total">Valor total: R$ 100,00 <img src="https://cdn-icons-png.freepik.com/256/13558/13558989.png?semt=ais_hybrid" alt="documentos" width="50" padding="50"></p>
-                        </div>
+                    <div class="summary-box">
+                        <p>Código da compra: <strong>1248532</strong></p>
+                        <p>Cupons: <strong>-</strong></p>
+                        <p class="total">Valor total: R$ 100,00</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../script.js" defer></script>
 </body>
-</html>
-
 </html>
