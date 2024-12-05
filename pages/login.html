@@ -5,187 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergoviver - Login</title>
     <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
-    <style>
-       * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    html, body {
-        width: 100%;
-        height: 100%;
-        font-family: 'Raleway', sans-serif;
-        background-color: #f4f4f4;
-    }
-    
-    .container-login {
-        display: flex;
-        width: 100%;
-        height: 100vh; 
-    }
-    
-    /* Estilo da seção esquerda */
-    .left-section {
-        flex: 1;
-        background-color: #ffffff; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        margin-top: 50px; 
-    }
-    
-    .left-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center; 
-        height: 100%; 
-        padding: 20px; 
-        background-color: #ffffff;
-        
-    }
-    
-    .left-section h1 {
-        color: #00856F;
-        font-size: 36px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 30px; 
-        line-height: 1.5;
-    }
-    
-    .left-section img {
-        width: 80%; 
-        max-width: 600px; 
-        height: auto; 
-        border-radius: 20px;
-        margin-top: 20px; 
-    }
-    
-    /* Estilo da seção direita */
-    .right-section {
-        flex: 1;
-        background-color: #2A9D8F;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-    
-    .login-form {
-        width: 100%;
-        max-width: 400px;
-        background-color: #ffffff;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-    
-    .login-form img {
-        width: 80px;
-        margin-bottom: 20px;
-    }
-    
-    .login-form h2 {
-        font-size: 24px;
-        color: #00856F;
-        margin-bottom: 20px;
-    }
-    
-    .login-form input {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-    
-    .login-form input[type="checkbox"] {
-        width: auto;
-        margin-right: 10px;
-    }
-    
-    .login-form button {
-        width: 100%;
-        padding: 12px;
-        background-color: #00856F;
-        color: #ffffff;
-        border: none;
-        border-radius: 12px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-    
-    .login-form button:hover {
-        background-color: #006F57;
-    }
-    
-    .login-form a {
-        color: #00856F;
-        text-decoration: none;
-        font-size: 14px;
-    }
-    
-    .login-form a:hover {
-        text-decoration: underline;
-    } 
-
-    .button {
-        display: inline-block;
-        text-align: center;
-        padding: 12px 20px;
-        background-color: #ffffff; 
-        color: #00856F; 
-        border: 2px solid #00856F; 
-        border-radius: 12px;
-        text-decoration: none; 
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s; 
-        cursor: pointer;
-        
-    }
-    
-    .button:hover {
-        background-color: #00856F; 
-        color: #ffffff; 
-    }
-    </style>
-    
-    
+    <link rel="stylesheet" href="../style.css">
+     
 </head>
 <body>
     <div class="container-login">
-        <div class="left-section">
+        <div class="left-section-login">
             <h1>Faça login e junte-se a nós para transformar sua saúde!</h1>
             <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/Doctors-pana%201.png?raw=true" alt="Profissionais de saúde">
         </div>
-        <div class="right-section">
+        <div class="right-section-login">
             <div class="login-form">
-               <!-- Logo no topo do formulário -->
-               <div class="logo-container">
-                <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true" alt="Logo da Ergoviver" class="logo-sobre">
-            </div>
-                <form>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Senha" required>
-                    <label>
-                        <input type="checkbox"> Lembrar de mim
-                    </label>
-                    <button type="submit">ENTRAR</button>
-                    <a href="#">Esqueceu a senha?</a>
-                    <h4>Não possui conta?</h4>
+                <div class="logo-text-container-login">
+                    <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true" alt="Logo da Ergoviver" class="logo-login">
+                    <h1>Ergoviver</h1>
+                </div>
+                <h2>Entrar</h2>
+                <form id="login-form">
+                    <input type="email" placeholder="Email" required autocomplete="email">
+                    <input type="password" placeholder="Senha" required autocomplete="current-password">
+                    <div class="options-row">
+                        <label>
+                            <input type="checkbox"> Lembrar de mim
+                        </label>
+                        <a href="#" class="recover-password">Recuperar senha</a>
+                    </div>
+                    <button type="submit" id="login-button">ENTRAR</button>
                     <a href="cadastro.html" class="button">CADASTRE-SE</a>
                 </form>
             </div>
         </div>
     </div>
-    <script src="../script.js" defer></script>
 </body>
 </html>
