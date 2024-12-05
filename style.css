@@ -1,0 +1,707 @@
+ /* Estilos gerais */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+/* ============= HOME =============*/
+/* HOME PARTE 1:  Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.ladoEsquerdoHeader{
+    margin-left: 30px;
+}
+
+.decoracaoLogo {
+    position: absolute;
+    top: 5px; 
+    left: -250px;
+    width: 130px;
+    height: 130px;
+    
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 25px;;
+    z-index: 3; 
+}
+
+.logo-image { 
+    margin-left: -230px;
+    height:90px;
+    width:90px;
+    border-radius:500px;
+    top:-20px;
+    position:absolute;
+}
+
+.logo-text {
+    color: #ffffff; 
+    font-weight: bold; 
+    text-align:right;
+    margin-left: -300px;
+    vertical-align:text-middle;
+    font-size:25px;
+    font-family:Raleway;
+    line-height:48px;
+    border-style:hidden;
+    outline:none;
+    width:324px;
+}
+
+/*NAV DA HOME */
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: flex-start; 
+    margin-left: 250px;
+}
+.nav a {
+    color: #00856F;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .signup {
+    border: 1px solid #00856F;
+    padding: 5px 10 px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px; 
+    color: #00856F;
+    transition: background-color 0.3s, color 0.3s;
+    width: 125px; 
+    height: 35px; 
+    display: inline-block; 
+    white-space: nowrap; 
+    text-align: center; 
+}
+
+.nav .signup:hover {
+    background-color: #00856F;
+    color: #ffffff;
+}
+
+/* PARTE 2 HOME: "FICA NO CENTRO DA PÁGINA" */
+.hero-image {
+    height: 650px;
+    width: 600px;
+    border-radius:378px;
+    left:350px;
+    top:30px;
+    position:absolute; 
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 70px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.hero-content h1 {
+    font-size: 2rem; 
+    line-height: 1.5;
+    color: #00695c; 
+    margin-right: 600px;
+}
+
+.botao {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #00796b; 
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: #399b8f8c; 
+}
+
+.cta-button:active {
+    transform: translateY(2px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.hero-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/*  nossos serviços*/
+.servicos-text {
+    text-align: center; 
+    padding: 20px 0;
+    font-family:Raleway;
+}
+
+.client-text-one {
+    color:#2bb79d;
+    text-align:center;
+    vertical-align:text-top;
+    font-size: 2.5rem;
+    font-family:Raleway;
+    margin: 0 auto;
+    line-height:auto;
+    border-style:hidden;
+    outline:none;
+    width:fit-content;
+    }
+
+.card {
+    height: 423px;
+    width: 368px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+    background-color: #00856f;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header-icon {
+    background-color: #ffffff;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.card-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.card-text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    line-height: 24px;
+}
+
+.button-primary {
+    background-color: #00856f;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    height: 47px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+    background-color: #016a62;
+}
+
+.servicos-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); 
+    background-color: #e9ecef; 
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9ecef; 
+    padding: 50px 0;
+}
+
+.servicos-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* sobre*/
+.sobre {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.titulo-sobre {
+    text-align: center;
+    font-size: 2.5em;
+    color: #00796b;
+    font-weight: bold;
+    font-family:Raleway;
+    margin-bottom: 30px;
+}
+
+.titulo-destaque {
+    color: #38b388;
+}
+
+.conteudo-sobre {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-sobre {
+    width: 190px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: -600px;
+    margin-top: -90px;
+}
+.imagem-ilustrativa {
+    width: 500;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: -700px;
+}
+
+.texto-e-imagem {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-sobre {
+    font-family: Montserrat;
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #000000;
+    margin-left: 500px;
+    font-size: 19px;
+    margin-top: -550px;
+    align-items: center;
+    text-align: justify; 
+}
+
+.lista-oferecemos {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.lista-oferecemos li {
+    margin-bottom: 10px;
+}
+
+
+/* RODAPÉ */
+.rodape {
+  background-color:#00856F;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#ffffff;
+}
+
+.text-footer{
+    align-items: center;
+    text-align: justify; 
+    margin-left: -90px;
+}
+.header-footer{
+    margin-left: 140px;
+}
+
+
+.copyright-text {
+  margin-left: 30px;
+}
+
+.card-content-footer{
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*===========LOGIN============= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    background-color: #F4F4F4;
+}
+
+.container-login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Estilo da seção esquerda */
+.left-section-login {
+    flex: 1;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.left-section-login h1 {
+    color: #00856F;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.left-section-login img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Estilo da seção direita */
+.right-section-login {
+    flex: 1;
+    background-color: #2A9D8F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form {
+    width: 450px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-text-container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-login {
+    width: 80px;
+    height: 80px;
+}
+
+.login-form h1 {
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.login-form h2 {
+    font-size: 22px;
+    color: #000000;
+    margin: 10px 0 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.recover-password {
+    color: #00856F;
+    text-decoration: none;
+}
+
+.recover-password:hover {
+    text-decoration: underline;
+}
+
+#login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00856F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#login-button:hover {
+    background-color: #006F57;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #FFFFFF;
+    color: #00856F;
+    border: 2px solid #00856F;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00856F;
+    color: #FFFFFF;
+}
+
+/*==== CADASTRO ==== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat;
+}
+
+.container-cadastro {
+    display: flex;
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden;
+}
+
+/* Estilo da seção esquerda */
+.left-section-cadastro {
+    flex: 1;
+    background-color: #eafaf1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section-cadastro h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #3B6555;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.left-section-cadastro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo da seção direita */
+.right-section-cadastro {
+    flex: 1;
+    background-color: #2a9d8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container-cadastro {
+    width: 500px;
+   width: 500px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da logo */
+.logo-container-cadastro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container-cadastro img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: -300px;
+}
+
+/* Estilo do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a9d8f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #23877c;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.nomeCadastro {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: #3B6555;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nomeCadastro span {
+    color: #2A9D8F;
+    font-weight: bold;
+}
+
+
+
