@@ -5,169 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergoviver - Cadastro</title>
     <link rel="icon" type="image/x-icon" href="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true">
-    <style>
-        /* Remover margens e padding padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* HTML e Body ocupando a tela inteira */
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: Montserrat;
-}
-
-/* Ajustar a estrutura geral */
-.container-cadastro {
-    display: flex;
-    height: 100%; /* Garantir que ocupe toda a altura da tela */
-    width: 100%; /* Garantir que ocupe toda a largura */
-    overflow: hidden;
-}
-
-/* Estilo da seção esquerda */
-.left-section-cadastro {
-    flex: 1;
-    background-color: #eafaf1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-section-cadastro h1 {
-    font-family: 'Raleway', sans-serif;
-    color: #3B6555;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    line-height: 1.5;
-}
-
-.left-section-cadastro img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Estilo da seção direita */
-.right-section-cadastro {
-    flex: 1;
-    background-color: #2a9d8f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.form-container-cadastro {
-    width: 100%;
-    max-width: 400px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo da logo */
-.logo-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo-container img {
-    max-width: 80px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Estilo do formulário */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-group button {
-    width: 100%;
-    padding: 12px;
-    background-color: #2a9d8f;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.form-group button:hover {
-    background-color: #23877c;
-}
-
-.login-link {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-.login-link a {
-    color: #2a9d8f;
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-.nomeCadastro {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    color: #3B6555;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.nomeCadastro span {
-    color: #2A9D8F;
-    font-weight: bold;
-}
-</style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container-cadastro">
-        <!-- Seção esquerda -->
         <div class="left-section-cadastro">
             <h1>Cadastre-se agora e venha fazer parte do Ergoviver para cuidar da sua saúde!</h1>
             <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/terapia%20em%20conjunto%20(cadastro).png?raw=true" alt="Profissionais de saúde">
         </div>
         
-        <!-- Seção direita -->
         <div class="right-section-cadastro">
             <div class="form-container-cadastro">
-                <h1 id="nomeCadastro" class="nomeCadastro">Bem-vindo ao <span>Ergoviver</span></h1>
-                <!-- Logo no topo do formulário -->
-                <div class="logo-container">
+                <h1 id="nomeCadastro" class="nomeCadastro">Bem-vindo ao <br><span>Ergoviver</span></h1>
+                <div class="logo-container-cadastro">
                     <img src="https://github.com/carlosqbarbosa/Ergoviver/blob/main/assets/img/logo/LOGO.png?raw=true" alt="Logo da Ergoviver" class="logo-sobre">
                 </div>
                 
-                <!-- Formulário -->
-                <form>
+                <form id="cadastro-form">
                     <div class="form-group">
                         <label for="full-name">Nome completo</label>
                         <input type="text" id="full-name" name="full-name" placeholder="Digite seu nome completo">
@@ -185,7 +39,7 @@ html, body {
                         <input type="password" id="password" name="password" placeholder="Digite sua senha">
                     </div>
                     <div class="form-group">
-                        <button type="submit">CRIAR CONTA</button>
+                        <button href="/pages/perfil.html "type="submit">CRIAR CONTA</button>
                     </div>
                     <div class="login-link">
                         <a href="/pages/login.html">Já possui uma conta? Entre aqui</a>
